@@ -3,27 +3,37 @@ new Vue ({
     el:"#app",
     data: {
       
-        User: "Shourav",
-        age: "29",
-        requiredAge: "22",
+       name: "Shourav",
+       age: "20",
+       x: 0,
+       y: 0,
 
-        user:{
+       formData: {
 
+        firstName: "",
+        lastName: ""
 
-            nasmeIS: "Sara",
-            age: "10",
-            skinColor: "white",
-        },
-
-        cars:["toyota","corolla","alllion"],
+       }
       
     },
 
     methods: {
-        changeUser(){
 
-            return this.User === "Shourav" ? true:false;
+        getUpdateName(){
+
+            this.name ="khan Shourav",
+            this.age = "18"
+        },
+
+        updateCoor(event){
+            this.x=event.clientX;
+            this.y = event.clientY;
+        },
+
+        handleForm(){
+                console.log(this.formData);
         }
+       
     },
 
  
